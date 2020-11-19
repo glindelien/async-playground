@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/glindelien/async-playground/issues"
   },
-  "homepage": "https://github.com/glindelien/async-playground#readme"
+  "homepage": "https://github.com/glindelien/async-playground#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
