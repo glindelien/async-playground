@@ -1,8 +1,8 @@
+UPDATE 12/7/2020 2:50PM PT
+After pivoting to use the IQAir AirVisual API for the AQ API for this project, it seems geocoding may no longer be needed. We can specify a city/country instead as parameters. These notes are closed for now.
+
 The Air Quality API requires latitude and longitude as parameters to retrive air quality data from the API.
 
 Google has a promising Geocoding API that looks like it could be a good option for converting user inputted zip codes to lat/lon coordinates.
 
 https://developers.google.com/maps/documentation/geocoding/start
-
-UPDATE 12/7/2020 2:50PM PT
-After pivoting to use the IQAir AirVisual API for the AQ API for this project, it seems geocoding may no longer be needed. We can specify a city/country instead as parameters. These notes are closed for now.

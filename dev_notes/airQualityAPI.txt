@@ -1,16 +1,3 @@
-Potential Air Quality APIs to use:
-
-https://rapidapi.com/weatherbit/api/air-quality
-
-Air Quality API seems like the winner since it also includes the ability to fetch historical data, in addition to current (realtime) air quality data and forecasted data. All of these data points may be useful for the target audience.
-
-NOTE: Both require latitude and longitude as parameters in order to retrieve air quality data from the API.
-
-UPDATE 12/7/2020 2:40PM PT
-Air Quality API is expensive ($400-500/month) in order to interact with it. Pivoting to IQ Air's AirVisual API instead.
-
-https://www.iqair.com/us/dashboard/api
-
 UPDATE 12/7/2020 2:50PM PT
 Have made significant progress investigating how to interact with AQ API using Postman.
 
@@ -20,3 +7,16 @@ http://api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&k
 
 API Key can be found when logging in here:
 https://www.iqair.com/us/dashboard/api
+
+UPDATE 12/7/2020 2:40PM PT
+Air Quality API is expensive ($400-500/month) in order to interact with it. Pivoting to IQ Air's AirVisual API instead.
+
+https://www.iqair.com/us/dashboard/api
+
+Potential Air Quality APIs to use:
+
+https://rapidapi.com/weatherbit/api/air-quality
+
+Air Quality API seems like the winner since it also includes the ability to fetch historical data, in addition to current (realtime) air quality data and forecasted data. All of these data points may be useful for the target audience.
+
+NOTE: Both require latitude and longitude as parameters in order to retrieve air quality data from the API.
