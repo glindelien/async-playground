@@ -1,0 +1,5 @@
+The Air Quality API requires latitude and longitude as parameters to retrive air quality data from the API.
+
+Google has a promising Geocoding API that looks like it could be a good option for converting user inputted zip codes to lat/lon coordinates.
+
+https://developers.google.com/maps/documentation/geocoding/start
