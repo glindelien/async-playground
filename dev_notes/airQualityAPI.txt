@@ -1,8 +1,12 @@
 Potential Air Quality APIs to use:
 
 https://rapidapi.com/weatherbit/api/air-quality
-https://rapidapi.com/ClimaCell/api/climacell?endpoint=apiendpoint_1788f7e5-2a1e-4683-9b84-c434b9a52491
 
 Air Quality API seems like the winner since it also includes the ability to fetch historical data, in addition to current (realtime) air quality data and forecasted data. All of these data points may be useful for the target audience.
 
 NOTE: Both require latitude and longitude as parameters in order to retrieve air quality data from the API.
+
+UPDATE 12/7 2:40PM PT
+Air Quality API is expensive ($400-500/month) in order to interact with it. Pivoting to IQ Air's AirVisual API instead.
+
+https://www.iqair.com/us/dashboard/api
