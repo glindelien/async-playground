@@ -10,3 +10,13 @@ UPDATE 12/7/2020 2:40PM PT
 Air Quality API is expensive ($400-500/month) in order to interact with it. Pivoting to IQ Air's AirVisual API instead.
 
 https://www.iqair.com/us/dashboard/api
+
+UPDATE 12/7/2020 2:50PM PT
+Have made significant progress investigating how to interact with AQ API using Postman.
+
+Here is the endpoint for fetching air quality data by specified city:
+
+http://api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&key={INSERT API KEY}
+
+API Key can be found when logging in here:
+https://www.iqair.com/us/dashboard/api
