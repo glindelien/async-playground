@@ -1,3 +1,3 @@
-# Async Playground
+# AwAir
 
-Full-Stack SPA for async code experimentation
+Full-Stack SPA offering users an interface for regularly tracking the current air quality & forecast for multiple zip codes.
