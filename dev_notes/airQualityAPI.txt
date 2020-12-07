@@ -6,7 +6,7 @@ Air Quality API seems like the winner since it also includes the ability to fetc
 
 NOTE: Both require latitude and longitude as parameters in order to retrieve air quality data from the API.
 
-UPDATE 12/7 2:40PM PT
+UPDATE 12/7/2020 2:40PM PT
 Air Quality API is expensive ($400-500/month) in order to interact with it. Pivoting to IQ Air's AirVisual API instead.
 
 https://www.iqair.com/us/dashboard/api
