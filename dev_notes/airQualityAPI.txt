@@ -1,3 +1,10 @@
+UPDATE 12/7/2020 3:11PM PT
+Able to fetch both forecast & current AQI from AirNow API. Great progress.
+
+Have saved API requests for both to Postman. Here is the documentation:
+https://docs.airnowapi.org/CurrentObservationsByZip/docs
+https://docs.airnowapi.org/forecastsbyzip/docs
+
 UPDATE 12/7/2020 3:00PM PT
 Another required change to AQ API choice. AirVisual does not provide PM2.5 data on the free tier, which is an essential piece of data for our users.
 
