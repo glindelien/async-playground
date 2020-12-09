@@ -3,3 +3,6 @@ node_modules
 
 # MySQL Config
 config.js
+
+# Webpack Bundle
+main.js
