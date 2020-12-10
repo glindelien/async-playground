@@ -4,7 +4,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
   }
-  render {
+  render() {
     return (
       <p>Hello World</p>
     );
