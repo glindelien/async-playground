@@ -20,4 +20,5 @@ body {
   font-size: 75px;
   font-weight: 650;
   color: #446b92;
+  border-bottom: 1px solid #446b92;
 };
