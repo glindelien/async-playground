@@ -6,7 +6,9 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div class='title'>Aw<span id='air'>air</span>e</div>
+      <div id='content'>
+        <div class='title'>Aw<span id='air'>air</span>e</div>
+      </div>
     );
   }
 }
