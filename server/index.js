@@ -4,6 +4,8 @@ const db = require('../database/queryHandlers.js');
 const app = express();
 const port = 3000;
 
+app.use(express.static('public'));
+
 app.get('/api/todos', (req, res) => {
   db.getAllTasks()
     .then((todos) => {
