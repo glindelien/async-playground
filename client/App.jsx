@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Title from './components/Title.jsx';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -7,7 +9,7 @@ class App extends React.Component {
   render() {
     return (
       <div id='content'>
-        <div class='title'>Aw<span id='air'>air</span>e</div>
+        <Title />
       </div>
     );
   }
