@@ -13,10 +13,11 @@ class App extends React.Component {
   }
 
   handleInputChange(e) {
-    const zipCode = e.target.value;
+    e.preventDefault();
+    const value = e.target.value;
     const name = e.target.name;
     this.setState({
-      [name]: zipCode
+      [name]: value
     });
   }
 
