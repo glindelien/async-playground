@@ -9,7 +9,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      zipCode: ''
+      zipCode: '',
+      ozone: 'O3',
+      pm25: 'PM2.5',
+      pm10: 'PM10'
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
