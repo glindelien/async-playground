@@ -1,11 +1,15 @@
 import React from 'react';
+import AirQualityCard from './AirQualityCard.jsx';
 
-const AirQualityView = ({ ozone, pm25, pm10 }) => {
+const AirQualityView = ({ AQI }) => {
   return (
     <div id='air-quality-view'>
-      <div className='aqi ozone'>Ozone<br />{ozone}</div>
-      <div className='aqi PM25'>PM2.5<br />{pm25}</div>
-      <div className='aqi PM10'>PM10<br />{pm10}</div>
+      {AQI.map((data, index) => {
+        return (
+          <AirQualityCard data={data}
+                          key={index} />
+        )
+      })}
     </div>
   );
 };
