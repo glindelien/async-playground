@@ -10,9 +10,21 @@ body {
 }
 
 #air-quality-view {
-  margin-top: 10%;
+  margin-top: 5%;
   height: 200px;
+  /* border: 1px solid #24374b; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.aqi {
+  width: 125px;
+  height: 125px;
   border: 1px solid #24374b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submit-zip {
