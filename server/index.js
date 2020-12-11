@@ -24,8 +24,7 @@ app.post('/api/getAqiByZip', (req, res) => {
   // Fetch AQI data from AirNow API
   axios.get(airNowURL + currentAqi + params)
   .then((result) => {
-    console.log(result.data);
-    res.send();
+    res.send(result.data);
   })
   .catch((err) => {
     console.log(err);
