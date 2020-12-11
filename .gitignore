@@ -6,3 +6,6 @@ config.js
 
 # Webpack Bundle
 main.js
+
+# AirNow API Key
+airNowApiKey.js
