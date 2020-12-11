@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import Title from './components/Title.jsx';
 import SubmitZipCode from './components/SubmitZipCode.jsx';
@@ -23,7 +24,15 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(event.target)
+    axios.post('/api/getAqiByZip', {
+      zipCode: this.state.zipCode
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   }
 
   render() {
