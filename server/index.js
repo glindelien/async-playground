@@ -20,5 +20,5 @@ app.get('/api/todos', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Async Playground listening at http://localhost:${port}`);
+  console.log(`Awaire listening at http://localhost:${port}`);
 });
