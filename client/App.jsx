@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Title from './components/Title.jsx';
 import SubmitZipCode from './components/SubmitZipCode.jsx';
+import AirQualityView from './components/AirQualityView.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,6 +47,7 @@ class App extends React.Component {
         <SubmitZipCode handleInputChange={this.handleInputChange}
                        handleSubmit={this.handleSubmit}
                        zipCode={this.state.zipCode} />
+        <AirQualityView />
       </div>
     );
   }
