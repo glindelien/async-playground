@@ -5,6 +5,10 @@ body {
   color: #7ca5ce;
 }
 
+*:focus {
+  outline: none;
+}
+
 .submit-zip {
   margin-top: 10%;
   font-size: 15px;
