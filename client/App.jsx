@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      zipCode: null
+      zipCode: ''
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,6 +29,9 @@ class App extends React.Component {
     })
     .then((res) => {
       console.log(res);
+      this.setState({
+        zipCode: ''
+      });
     })
     .catch((err) => {
       console.log(err);
