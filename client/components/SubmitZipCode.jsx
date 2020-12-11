@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SubmitZipCode = ({ handleInputChange, zipCode }) => (
+const SubmitZipCode = ({ handleInputChange, handleSubmit, zipCode }) => (
   <div class="submit-zip">
-    <form>
+    <form onSubmit={handleSubmit}>
       <label>
         Zip Code&nbsp;&nbsp;
       <input type="number"
