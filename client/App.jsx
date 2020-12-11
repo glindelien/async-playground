@@ -10,9 +10,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       zipCode: '',
-      ozone: 'O3',
-      pm25: 'PM2.5',
-      pm10: 'PM10'
+      ozone: null,
+      pm25: null,
+      pm10: null
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,9 +32,14 @@ class App extends React.Component {
       zipCode: this.state.zipCode
     })
     .then((res) => {
-      console.log(res);
+      const currentOzone = res.data[0].AQI;
+      const currentPm25 = res.data[1].AQI;
+      const currentPm10 = res.data[2].AQI;
       this.setState({
-        zipCode: ''
+        zipCode: '',
+        ozone: currentOzone,
+        pm25: currentPm25,
+        pm10: currentPm10
       });
     })
     .catch((err) => {
@@ -43,14 +48,15 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.zipCode)
     return (
       <div id='main'>
         <Title />
         <SubmitZipCode handleInputChange={this.handleInputChange}
                        handleSubmit={this.handleSubmit}
                        zipCode={this.state.zipCode} />
-        <AirQualityView />
+        <AirQualityView ozone={this.state.ozone}
+                        pm25={this.state.pm25}
+                        pm10={this.state.pm10} />
       </div>
     );
   }
