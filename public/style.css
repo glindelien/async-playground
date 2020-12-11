@@ -9,6 +9,12 @@ body {
   outline: none;
 }
 
+#air-quality-view {
+  margin-top: 10%;
+  height: 200px;
+  border: 1px solid #24374b;
+}
+
 .submit-zip {
   margin-top: 10%;
   font-size: 15px;
