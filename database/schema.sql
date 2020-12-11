@@ -1,12 +1,12 @@
-DROP DATABASE IF EXISTS async_todo;
+DROP DATABASE IF EXISTS awaire;
 
-CREATE DATABASE async_todo;
+CREATE DATABASE awaire;
 
-USE async_todo;
+USE awaire;
 
-CREATE TABLE todos (
+CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
-  task TEXT(65535) NOT NULL,
-  completed BOOL NOT NULL,
+  email TEXT(65535) NOT NULL,
+  locations TEXT NOT NULL,
   PRIMARY KEY (id)
 );
