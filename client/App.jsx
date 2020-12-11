@@ -8,7 +8,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div id='content'>
+      <div id='main'>
         <Title />
       </div>
     );
