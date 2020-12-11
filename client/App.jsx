@@ -10,9 +10,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       zipCode: '',
-      ozone: null,
-      pm25: null,
-      pm10: null
+      AQI: [
+        { ParameterName: 'Ozone' },
+        { ParameterName: 'PM2.5' },
+        { ParameterName: 'PM10' }
+      ]
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,20 +33,15 @@ class App extends React.Component {
     axios.post('/api/getAqiByZip', {
       zipCode: this.state.zipCode
     })
-    .then((res) => {
-      const currentOzone = res.data[0].AQI;
-      const currentPm25 = res.data[1].AQI;
-      const currentPm10 = res.data[2].AQI;
-      this.setState({
-        zipCode: '',
-        ozone: currentOzone,
-        pm25: currentPm25,
-        pm10: currentPm10
+      .then((res) => {
+        this.setState({
+          zipCode: '',
+          AQI: res.data
+        });
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
   }
 
   render() {
@@ -54,9 +51,7 @@ class App extends React.Component {
         <SubmitZipCode handleInputChange={this.handleInputChange}
                        handleSubmit={this.handleSubmit}
                        zipCode={this.state.zipCode} />
-        <AirQualityView ozone={this.state.ozone}
-                        pm25={this.state.pm25}
-                        pm10={this.state.pm10} />
+        <AirQualityView AQI={this.state.AQI} />
       </div>
     );
   }
