@@ -5,7 +5,7 @@ const SubmitZipCode = ({ handleInputChange, handleSubmit, zipCode }) => (
     <form onSubmit={handleSubmit}>
       <label>
         Zip Code&nbsp;&nbsp;
-      <input type="number"
+      <input type="text"
              name="zipCode"
              onChange={handleInputChange}
              value={zipCode} />
