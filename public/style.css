@@ -9,16 +9,15 @@ body {
   outline: none;
 }
 
-#air-quality-view {
-  margin-top: 5%;
+#air-quality-cards {
+  margin-top: 3%;
   height: 200px;
-  /* border: 1px solid #24374b; */
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.aqi {
+.aqi-card {
   width: 125px;
   height: 125px;
   border: 1px solid #24374b;

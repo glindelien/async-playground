@@ -5,7 +5,7 @@ const AirQualityCard = ({ data }) => {
   data.ParameterName === 'O3' ? parameter = 'Ozone' : parameter;
 
   return (
-    <div className='aqi'>
+    <div className='aqi-card'>
       {parameter}
       <br />
       {data.AQI}
