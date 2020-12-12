@@ -11,11 +11,7 @@ class AirQualityView extends React.Component {
     this.state = {
       zipCode: '',
       location: '',
-      AQI: [
-        { ParameterName: 'Ozone', Category: {Name: null} },
-        { ParameterName: 'PM2.5', Category: {Name: null} },
-        { ParameterName: 'PM10', Category: {Name: null} }
-      ]
+      AQI: []
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -50,22 +46,25 @@ class AirQualityView extends React.Component {
 
   render() {
     let locationJSX = null;
+    let airQualityCardJSX = null;
+
+    // Only render these components if user submits zip code
     if (this.state.location !== '') {
       locationJSX = <Location location={this.state.location}/>;
+      airQualityCardJSX = this.state.AQI.map((data, index) => {
+        return (
+          <AirQualityCard data={data}
+                          key={index} />
+        )});
     }
+
     return (
       <div>
         <SubmitZipCode handleInputChange={this.handleInputChange}
                        handleSubmit={this.handleSubmit}
                        zipCode={this.state.zipCode} />
         {locationJSX}
-        <div id='air-quality-cards' >
-          {this.state.AQI.map((data, index) => {
-              return (
-                <AirQualityCard data={data}
-                                key={index} />
-              )})}
-        </div>
+        <div id='air-quality-cards'>{airQualityCardJSX}</div>
       </div>
     );
   }
