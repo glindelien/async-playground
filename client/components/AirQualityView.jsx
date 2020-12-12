@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import SubmitZipCode from './SubmitZipCode.jsx';
+import Location from './Location.jsx';
 import AirQualityCard from './AirQualityCard.jsx';
 
 class AirQualityView extends React.Component {
@@ -9,6 +10,7 @@ class AirQualityView extends React.Component {
     super(props);
     this.state = {
       zipCode: '',
+      location: '',
       AQI: [
         { ParameterName: 'Ozone' },
         { ParameterName: 'PM2.5' },
@@ -33,8 +35,11 @@ class AirQualityView extends React.Component {
       zipCode: this.state.zipCode
     })
       .then((res) => {
+        const city = res.data[0].ReportingArea;
+        const state = res.data[0].StateCode;
         this.setState({
           zipCode: '',
+          location: `${city}, ${state}`,
           AQI: res.data
         });
       })
@@ -44,11 +49,16 @@ class AirQualityView extends React.Component {
   }
 
   render() {
+    let locationJSX = null;
+    if (this.state.location !== '') {
+      locationJSX = <Location location={this.state.location}/>;
+    }
     return (
       <div>
         <SubmitZipCode handleInputChange={this.handleInputChange}
                        handleSubmit={this.handleSubmit}
                        zipCode={this.state.zipCode} />
+        {locationJSX}
         <div id='air-quality-cards' >
           {this.state.AQI.map((data, index) => {
               return (
