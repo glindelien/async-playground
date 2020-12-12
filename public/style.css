@@ -17,6 +17,11 @@ body {
   align-items: center;
 }
 
+.location {
+  margin-top: 10%;
+  font-weight: 900;
+}
+
 .aqi-card {
   width: 125px;
   height: 125px;
@@ -28,8 +33,31 @@ body {
 
 .submit-zip {
   margin-top: 10%;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 900;
+}
+
+#zipCode, #submit {
+  width: 80px;
+  padding: 10px;
+  background-color: #24374b;
+  text-align: center;
+  font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  border: 1px solid #446b92;
+  color: #7ca5ce;
+}
+
+#submit {
+  margin-left: 10px;
+  width: 50px;
+  height: 51px;
+  font-size: 25px;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: #36506d;
 }
 
 #description {
