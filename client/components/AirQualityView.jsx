@@ -50,14 +50,11 @@ class AirQualityView extends React.Component {
                        handleSubmit={this.handleSubmit}
                        zipCode={this.state.zipCode} />
         <div id='air-quality-view' >
-          {
-            this.state.AQI.map((data, index) => {
+          {this.state.AQI.map((data, index) => {
               return (
                 <AirQualityCard data={data}
                                 key={index} />
-              )
-            })
-          }
+              )})}
         </div>
       </div>
     );
