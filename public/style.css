@@ -25,10 +25,35 @@ body {
 .aqi-card {
   width: 125px;
   height: 125px;
-  border: 1px solid #24374b;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #11181f;
+  border: 1px solid #24374b;
+}
+
+.good {
+  border: 1px solid #1c611c;
+}
+
+.moderate {
+  border: 1px solid #6d6d00;
+}
+
+.unhealthyforsensitivegroups {
+  border: 1px solid #854301;
+}
+
+.unhealthy {
+  border: 1px solid #830101;
+}
+
+.veryunhealthy {
+  border: 1px solid #7d2685;
+}
+
+.hazardous {
+  border: 1px solid #750021;
 }
 
 .submit-zip {

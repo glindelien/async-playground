@@ -12,9 +12,9 @@ class AirQualityView extends React.Component {
       zipCode: '',
       location: '',
       AQI: [
-        { ParameterName: 'Ozone' },
-        { ParameterName: 'PM2.5' },
-        { ParameterName: 'PM10' }
+        { ParameterName: 'Ozone', Category: {Name: null} },
+        { ParameterName: 'PM2.5', Category: {Name: null} },
+        { ParameterName: 'PM10', Category: {Name: null} }
       ]
     };
     this.handleInputChange = this.handleInputChange.bind(this);
