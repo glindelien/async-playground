@@ -4,7 +4,7 @@ const Title = () => (
   <div>
     <div className='title'>Aw<span id='air'>air</span>e</div>
     <div id='description'>
-      remain aware by tracking air quality for multiple locations
+      a breath of fresh air
     </div>
   </div>
 );
