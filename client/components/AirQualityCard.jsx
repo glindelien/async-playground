@@ -1,11 +1,16 @@
 import React from 'react';
 
-const AirQualityCard = ({ data }) => (
-  <div className='aqi'>
-    {data.ParameterName}
-    <br />
-    {data.AQI}
-  </div>
-);
+const AirQualityCard = ({ data }) => {
+  let parameter = data.ParameterName;
+  data.ParameterName === 'O3' ? parameter = 'Ozone' : parameter;
+
+  return (
+    <div className='aqi'>
+      {parameter}
+      <br />
+      {data.AQI}
+    </div>
+  );
+};
 
 export default AirQualityCard;
