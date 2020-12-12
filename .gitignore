@@ -12,3 +12,6 @@ main.js
 
 # AirNow API Key
 airNowApiKey.js
+
+#AWS Key
+awaire.pem
