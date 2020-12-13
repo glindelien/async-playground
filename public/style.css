@@ -63,7 +63,7 @@ body {
 }
 
 #zipCode, #submit {
-  width: 80px;
+  width: 150px;
   padding: 10px;
   background-color: #24374b;
   text-align: center;
