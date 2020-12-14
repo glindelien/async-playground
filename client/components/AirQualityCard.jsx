@@ -9,7 +9,7 @@ const AirQualityCard = ({ data }) => {
   }
 
   return (
-    <div className={`aqi-card ${category}`}>
+    <div className={`index-card ${category}`}>
       {parameter}
       <br />
       {data.AQI}

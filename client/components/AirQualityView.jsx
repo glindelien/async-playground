@@ -64,7 +64,9 @@ class AirQualityView extends React.Component {
                        handleSubmit={this.handleSubmit}
                        zipCode={this.state.zipCode} />
         {locationJSX}
-        <div id='air-quality-cards'>{airQualityCardJSX}</div>
+        <div id='aqi-cards'>
+          {airQualityCardJSX}
+        </div>
       </div>
     );
   }
