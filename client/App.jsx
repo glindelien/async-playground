@@ -49,8 +49,8 @@ class App extends React.Component {
       <div id='main'>
         <Title />
         <AddLocation handleInputChange={this.handleInputChange}
-                       handleSubmit={this.handleSubmit}
-                       zipCode={this.state.zipCode} />
+                     handleSubmit={this.handleSubmit}
+                     zipCode={this.state.zipCode} />
         <AirQualityCard location={this.state.location}
                         aqi={this.state.aqi}
                         zipCode={this.state.zipCode} />
