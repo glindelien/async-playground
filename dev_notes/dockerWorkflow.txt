@@ -1,0 +1,7 @@
+12/13/2020 6:15pm PT
+
+// Build + Push Docker Container
+
+awaire % docker build -t 239424574742.dkr.ecr.us-west-1.amazonaws.com/awaire .
+
+awaire % docker push 239424574742.dkr.ecr.us-west-1.amazonaws.com/awaire:latest
