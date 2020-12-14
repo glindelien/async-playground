@@ -1,8 +1,8 @@
 import React from 'react';
 
-const AddLocation = ({ handleInputChange, handleSubmit, zipCode }) => (
+const AddLocation = ({ handleInputChange, addLocation, zipCode }) => (
   <div className="input-submit">
-    <form id="zip" onSubmit={handleSubmit}>
+    <form id="zip" onSubmit={addLocation}>
       <label>
         AQI by Zip Code:&nbsp;&nbsp;
       <input type="text"

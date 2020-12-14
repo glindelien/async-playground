@@ -14,7 +14,7 @@ class App extends React.Component {
       aqi: []
     };
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.addLocation = this.addLocation.bind(this);
   }
 
   handleInputChange(e) {
@@ -25,7 +25,7 @@ class App extends React.Component {
     });
   }
 
-  handleSubmit(event) {
+  addLocation(event) {
     event.preventDefault();
     axios.post('/api/getAqiByZip', {
       zipCode: this.state.zipCode
@@ -49,7 +49,7 @@ class App extends React.Component {
       <div id='main'>
         <Title />
         <AddLocation handleInputChange={this.handleInputChange}
-                     handleSubmit={this.handleSubmit}
+                     addLocation={this.addLocation}
                      zipCode={this.state.zipCode} />
         <AirQualityCard location={this.state.location}
                         aqi={this.state.aqi}
