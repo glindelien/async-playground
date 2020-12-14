@@ -14,7 +14,8 @@ body {
 /* div for rendering all App components */
 #main {
   display: block;
-  width: 500px;
+  width: 100%;
+  height: 100%;
   margin: auto;
   text-align: center;
 }
@@ -28,7 +29,8 @@ body {
 }
 
 .title {
-  margin-top: 10%;
+  margin: 75px auto auto auto;
+  width: 500px;
   font-family: 'Poiret One', Arial, Helvetica, sans-serif;
   font-size: 75px;
   font-weight: 650;
@@ -45,7 +47,7 @@ body {
 
 /* div for Input & Submit */
 .input-submit {
-  margin-top: 10%;
+  margin-top: 50px;
   font-size: 20px;
   font-weight: 900;
 }
@@ -76,8 +78,29 @@ button:hover {
   background-color: #36506d;
 }
 
-/* AQI View */
-#aqi-cards {
+/* AQI VIEW */
+
+/* div for all AQI cards */
+.aqi-cards {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* single AQI card */
+.aqi-card {
+  margin: 0px 20px 20px 0px;
+}
+
+/* AQI Location */
+.location {
+  font-weight: 900;
+}
+
+/* div for index cards within AQI card */
+.index-cards {
   margin-top: 3%;
   height: 200px;
   display: flex;
@@ -85,13 +108,7 @@ button:hover {
   align-items: center;
 }
 
-/* AQI Location */
-.location {
-  margin-top: 10%;
-  font-weight: 900;
-}
-
-/* Cards Displaying Indices */
+/* Index Cards */
 .index-card {
   width: 125px;
   height: 125px;
@@ -102,7 +119,7 @@ button:hover {
   /* border: 1px solid #24374b; */
 }
 
-/* Dynamically Render COLOR based on AQI */
+/* Dynamically Render COLOR of Index Cards based on AQI */
 .good {
   border: 1px solid #1c611c;
 }
