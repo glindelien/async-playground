@@ -1,3 +1,5 @@
+/* GLOBAL STYLES */
+
 body {
   background-color: #0d1117;
   font-family: 'Poiret One', Arial, Helvetica, sans-serif;
@@ -9,7 +11,73 @@ body {
   outline: none;
 }
 
-#air-quality-cards {
+/* div for rendering all App components */
+#main {
+  display: block;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+/* HEADER */
+
+/* Title */
+#air {
+  color: #7ca5ce;
+  font-weight: 750;
+}
+
+.title {
+  margin-top: 10%;
+  font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+  font-size: 75px;
+  font-weight: 650;
+  color: #446b92;
+  border-bottom: 1px solid #446b92;
+};
+
+/* Tagline */
+#description {
+  margin-top: 3%;
+}
+
+/* FORMS */
+
+/* div for Input & Submit */
+.input-submit {
+  margin-top: 10%;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* Input Fields & Buttons */
+input, button {
+  width: 150px;
+  padding: 10px;
+  background-color: #24374b;
+  text-align: center;
+  font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  border: 1px solid #446b92;
+  color: #7ca5ce;
+}
+
+/* Buttons */
+button {
+  margin-left: 10px;
+  width: 50px;
+  height: 51px;
+  font-size: 25px;
+}
+
+/* Hover Style for Buttons */
+button:hover {
+  cursor: pointer;
+  background-color: #36506d;
+}
+
+/* AQI View */
+#aqi-cards {
   margin-top: 3%;
   height: 200px;
   display: flex;
@@ -17,21 +85,24 @@ body {
   align-items: center;
 }
 
+/* AQI Location */
 .location {
   margin-top: 10%;
   font-weight: 900;
 }
 
-.aqi-card {
+/* Cards Displaying Indices */
+.index-card {
   width: 125px;
   height: 125px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #11181f;
-  border: 1px solid #24374b;
+  /* border: 1px solid #24374b; */
 }
 
+/* Dynamically Render COLOR based on AQI */
 .good {
   border: 1px solid #1c611c;
 }
@@ -55,57 +126,3 @@ body {
 .hazardous {
   border: 1px solid #750021;
 }
-
-.submit-zip {
-  margin-top: 10%;
-  font-size: 20px;
-  font-weight: 900;
-}
-
-#zipCode, #submit {
-  width: 150px;
-  padding: 10px;
-  background-color: #24374b;
-  text-align: center;
-  font-family: 'Poiret One', Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  border: 1px solid #446b92;
-  color: #7ca5ce;
-}
-
-#submit {
-  margin-left: 10px;
-  width: 50px;
-  height: 51px;
-  font-size: 25px;
-}
-
-#submit:hover {
-  cursor: pointer;
-  background-color: #36506d;
-}
-
-#description {
-  margin-top: 3%;
-}
-
-#main {
-  display: block;
-  width: 500px;
-  margin: auto;
-  text-align: center;
-}
-
-#air {
-  color: #7ca5ce;
-  font-weight: 750;
-}
-
-.title {
-  margin-top: 10%;
-  font-family: 'Poiret One', Arial, Helvetica, sans-serif;
-  font-size: 75px;
-  font-weight: 650;
-  color: #446b92;
-  border-bottom: 1px solid #446b92;
-};
