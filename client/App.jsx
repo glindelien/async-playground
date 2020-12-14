@@ -46,14 +46,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id='main'>
+      <div id="main">
         <Title />
         <AddLocation handleInputChange={this.handleInputChange}
                      addLocation={this.addLocation}
                      zipCode={this.state.zipCode} />
-        <AirQualityCard location={this.state.location}
-                        aqi={this.state.aqi}
-                        zipCode={this.state.zipCode} />
+        <div className="aqi-cards">
+          <AirQualityCard location={this.state.location}
+                          aqi={this.state.aqi}
+                          zipCode={this.state.zipCode} />
+        </div>
       </div>
     );
   }

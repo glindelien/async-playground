@@ -20,9 +20,9 @@ const AirQualityCard = ({ location, aqi, zipCode }) => {
   }
 
   return (
-    <div>
+    <div className="aqi-card">
       {locationJSX}
-      <div id='aqi-cards'>
+      <div className="index-cards">
         {indexCardJSX}
       </div>
     </div>
