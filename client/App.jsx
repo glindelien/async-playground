@@ -53,8 +53,6 @@ class App extends React.Component {
                        zipCode={this.state.zipCode} />
         <AirQualityView location={this.state.location}
                         aqi={this.state.aqi}
-                        handleInputChange={this.handleInputChange}
-                        handleSubmit={this.handleSubmit}
                         zipCode={this.state.zipCode} />
       </div>
     );
