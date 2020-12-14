@@ -1,20 +1,31 @@
 import React from 'react';
 
-const AirQualityCard = ({ data }) => {
-  let parameter = data.ParameterName;
-  data.ParameterName === 'O3' ? parameter = 'Ozone' : parameter;
-  let category = data.Category.Name;
-  if (data.Category.Name) {
-    category = data.Category.Name.split(' ').join('').toLowerCase();
-  }
+import Location from './Location.jsx';
+import IndexCard from './IndexCard.jsx';
 
-  return (
-    <div className={`index-card ${category}`}>
-      {parameter}
-      <br />
-      {data.AQI}
-    </div>
-  );
+const AirQualityCard = ({location, aqi, zipCode }) => {
+
+    let locationJSX = null;
+    let indexCardJSX = null;
+
+    // Only render these components if user submits zip code
+    if (location !== '') {
+      locationJSX = <Location location={location}/>;
+      indexCardJSX = aqi.map((data, index) => {
+        return (
+          <IndexCard data={data}
+                          key={index} />
+        )});
+    }
+
+    return (
+      <div>
+        {locationJSX}
+        <div id='aqi-cards'>
+          {indexCardJSX}
+        </div>
+      </div>
+    );
 };
 
 export default AirQualityCard;
