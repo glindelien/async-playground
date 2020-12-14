@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import Title from './components/Title.jsx';
-import SubmitZipCode from './components/SubmitZipCode.jsx';
+import AddLocation from './components/AddLocation.jsx';
 import AirQualityCard from './components/AirQualityCard.jsx';
 
 class App extends React.Component {
@@ -48,7 +48,7 @@ class App extends React.Component {
     return (
       <div id='main'>
         <Title />
-        <SubmitZipCode handleInputChange={this.handleInputChange}
+        <AddLocation handleInputChange={this.handleInputChange}
                        handleSubmit={this.handleSubmit}
                        zipCode={this.state.zipCode} />
         <AirQualityCard location={this.state.location}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SubmitZipCode = ({ handleInputChange, handleSubmit, zipCode }) => (
+const AddLocation = ({ handleInputChange, handleSubmit, zipCode }) => (
   <div className="input-submit">
     <form id="zip" onSubmit={handleSubmit}>
       <label>
@@ -15,4 +15,4 @@ const SubmitZipCode = ({ handleInputChange, handleSubmit, zipCode }) => (
   </div>
 );
 
-export default SubmitZipCode;
+export default AddLocation;
