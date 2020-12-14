@@ -53,8 +53,7 @@ class App extends React.Component {
                      zipCode={this.state.zipCode} />
         <div className="aqi-cards">
           <AirQualityCard location={this.state.location}
-                          aqi={this.state.aqi}
-                          zipCode={this.state.zipCode} />
+                          aqi={this.state.aqi} />
         </div>
       </div>
     );

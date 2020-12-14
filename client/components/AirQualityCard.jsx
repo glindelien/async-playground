@@ -3,7 +3,7 @@ import React from 'react';
 import Location from './Location.jsx';
 import IndexCard from './IndexCard.jsx';
 
-const AirQualityCard = ({ location, aqi, zipCode }) => {
+const AirQualityCard = ({ location, aqi }) => {
 
   let locationJSX = null;
   let indexCardJSX = null;
