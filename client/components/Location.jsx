@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Location = ({ location }) => (
+const Location = ({ loc }) => (
   <div className='location'>
-    {location}
+    {loc}
   </div>
 );
 

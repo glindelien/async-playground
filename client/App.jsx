@@ -3,14 +3,13 @@ import axios from 'axios';
 
 import Title from './components/Title.jsx';
 import AddLocation from './components/AddLocation.jsx';
-import AirQualityCard from './components/AirQualityCard.jsx';
+import AirQualityView from './components/AirQualityView.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       zipCode: '',
-      location: '',
       aqi: []
     };
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -31,12 +30,11 @@ class App extends React.Component {
       zipCode: this.state.zipCode
     })
       .then((res) => {
-        const city = res.data[0].ReportingArea;
-        const state = res.data[0].StateCode;
+        const newAqi = this.state.aqi;
+        newAqi.push(res.data);
         this.setState({
           zipCode: '',
-          location: `${city}, ${state}`,
-          aqi: res.data
+          aqi: newAqi
         });
       })
       .catch((err) => {
@@ -51,10 +49,7 @@ class App extends React.Component {
         <AddLocation handleInputChange={this.handleInputChange}
                      addLocation={this.addLocation}
                      zipCode={this.state.zipCode} />
-        <div className="aqi-cards">
-          <AirQualityCard location={this.state.location}
-                          aqi={this.state.aqi} />
-        </div>
+        <AirQualityView aqi={this.state.aqi} />
       </div>
     );
   }
