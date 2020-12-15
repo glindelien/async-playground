@@ -7,7 +7,7 @@ const API_KEY = require('./airNowApiKey.js');
 const db = require('../database/queryHandlers.js');
 
 const app = express();
-const port = 3000;
+const port = 80;
 
 // Middleware
 app.use(express.static('public'));
