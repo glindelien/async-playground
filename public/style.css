@@ -64,6 +64,15 @@ input, button {
   color: #7ca5ce;
 }
 
+/* Input Placeholders */
+input::placeholder {
+  color: #7ca5ce;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
 /* Buttons */
 button {
   margin-left: 10px;
