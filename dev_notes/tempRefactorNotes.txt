@@ -1,0 +1,17 @@
+aqi needs to become an array (representing locations) of arrays (representing AQI data for 1 location)
+addLocation needs to update state with the above in mind (pushing instead of replacing)
+Likely will be able to remove "location" property from state
+AirQualityView will be rendered in App (in place of AirQualityCard)
+AirQualityView will take in the aqi array from state
+  map through AQI array ((location) => {})
+    render AirQualityCard for each location
+    pass the current location (array) in as a prop
+
+AirQualityCard will need to be refactored
+takes in location (array) as a prop
+remove locationJSX variable
+rename indexCardJSX variable to airQualityCardJSX
+if block should check for the length of AQI array being greater than 0
+  map through location
+    render Location component with location data passed in
+    render IndexCard component with the current data object passed in
