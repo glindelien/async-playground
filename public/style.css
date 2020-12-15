@@ -101,7 +101,6 @@ button:hover {
 
 /* div for index cards within AQI card */
 .index-cards {
-  margin-top: 3%;
   height: 200px;
   display: flex;
   justify-content: space-around;
@@ -116,7 +115,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: #11181f;
-  /* border: 1px solid #24374b; */
+  margin: 0px 10px 10px 0px;
 }
 
 /* Dynamically Render COLOR of Index Cards based on AQI */
