@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       zipCode: '',
-      aqi: []
+      aqi: JSON.parse(localStorage.getItem('aqi')) || []
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.addLocation = this.addLocation.bind(this);
@@ -26,10 +26,16 @@ class App extends React.Component {
 
   addLocation(event) {
     event.preventDefault();
+    // send user submitted zip code to server
     axios.post('/api/getAqiByZip', {
       zipCode: this.state.zipCode
     })
       .then((res) => {
+        // add zip code to each AQI object in res array
+        res.data.forEach((index) => {
+          index.ZipCode = this.state.zipCode;
+        });
+        // push res data into AQI array & update state
         const newAqi = this.state.aqi;
         newAqi.push(res.data);
         this.setState({
@@ -43,6 +49,8 @@ class App extends React.Component {
   }
 
   render() {
+    // localStorage.setItem('aqi', JSON.stringify(this.state.aqi));
+    // localStorage.clear();
     return (
       <div id="main">
         <Title />
