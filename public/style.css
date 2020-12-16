@@ -95,12 +95,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* single AQI card */
-.aqi-card {
-  margin: 0px 20px 20px 0px;
+  justify-content: space-evenly;
 }
 
 /* AQI Location */
