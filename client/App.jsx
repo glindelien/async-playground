@@ -44,7 +44,7 @@ class App extends React.Component {
         });
       })
       .catch((err) => {
-        console.log(err);
+        alert('No data could be found for this zip code');
       });
   }
 
