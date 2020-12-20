@@ -25,10 +25,15 @@ app.post('/api/getAqiByZip', (req, res) => {
   // Fetch AQI data from AirNow API
   axios.get(airNowURL + currentAqi + params)
   .then((result) => {
+    if (result.data.length === 0) throw 'No Data Found';
+    console.log('Sending data to client...');
+    res.status(200);
     res.send(result.data);
   })
   .catch((err) => {
-    console.log(err);
+    console.log('Error: No data could be found...');
+    res.status(500);
+    res.send(err);
   });
 });
 
