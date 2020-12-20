@@ -1,0 +1,14 @@
+12/20/2020 12:30pm PT
+
+- Finished setting up a PostgreSQL database on Amazon RDS
+- AwaireDB is accessible remotely & publically via the command line
+
+To log in to awairedb via the command line:
+
+1) PSQL must be installed on the local computer or instance you're logging in from
+2) Enter the below command:
+
+psql --host=[endpoint] --dbname=awairedb
+
+3) You will be prompted for a password for user gracelindelien.
+[this password is stored in LastPass under awairedb]
