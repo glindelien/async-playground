@@ -1,0 +1,15 @@
+UPDATE 1/4/2021 4:00PM PT
+
+- Landing Page Concept -
+
+// On page load, the user sees an animation
+// The Awaire title fades in
+// Simultaneously, small circles slide/fade in from the left & right sides symmetrically
+// The tagline fades in
+// The circles fade out
+
+- Concept 2 -
+// Small circles drop down from top of page, ending just above where the title is displayed
+// Earlier circles fade out while newer ones fade in, so only 2-3 display at a time
+// When the circles reach the title, the title fades in
+// Tagline fades in almost immediately after (or starting during the title fade-in)
