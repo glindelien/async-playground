@@ -4,7 +4,7 @@ const axios = require('axios');
 
 // Config Files
 const API_KEY = require('./airNowApiKey.js');
-const db = require('../database/queryHandlers.js');
+const db = require('../database/mysql/queryHandlers.js');
 
 const app = express();
 const port = 80;
