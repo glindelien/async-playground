@@ -1,0 +1,17 @@
+UPDATE 1/9/2021 12:30pm PT
+
+- How do we implement a feature that allows users to remove locations they added previously? -
+
+- USER FEATURES -
+// Each AirQualityCard component will need to have an "X" button that indicates it can be deleted from AirQualityView
+// Enable auto-saving a user's locations to their localStorage
+// Add button or clickable text below AirQualityView that will enable the user to clear their own localStorage (resets the App)
+
+- REFACTOR -
+// Currently, when a zip code is submitted the API returns an array with the data. That data does not include the actual zip code, so we need to reattach it.
+// Instead of updating the state with just the array of AQI data, transform the data into an object.
+// That object will include two properties: one for the zip code (to identify it) and one for the array of associated AQI data
+
+- IMPLEMENTATION -
+// When a user clicks the remove/delete button on an AirQualityCard, this should trigger a filtering method that will filter out that location and reset State with remaining locations
+// Iterate through the current array of locations in state, when you find the zip code associated with the location to remove, remove it (could use splice or filter)
