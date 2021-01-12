@@ -14,6 +14,7 @@ class App extends React.Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.addLocation = this.addLocation.bind(this);
+    this.clearLocalStorage = this.clearLocalStorage.bind(this);
   }
 
   handleInputChange(e) {
@@ -48,16 +49,21 @@ class App extends React.Component {
       });
   }
 
+  clearLocalStorage() {
+    localStorage.clear();
+    this.setState({ aqi: [] });
+  }
+
   render() {
-    // localStorage.setItem('aqi', JSON.stringify(this.state.aqi));
-    // localStorage.clear();
+    localStorage.setItem('aqi', JSON.stringify(this.state.aqi));
     return (
       <div id="main">
         <Title />
         <AddLocation handleInputChange={this.handleInputChange}
                      addLocation={this.addLocation}
                      zipCode={this.state.zipCode} />
-        <AirQualityView aqi={this.state.aqi} />
+        <AirQualityView aqi={this.state.aqi}
+                        clearLocalStorage={this.clearLocalStorage} />
       </div>
     );
   }
