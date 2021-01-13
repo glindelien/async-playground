@@ -1,3 +1,9 @@
+UPDATE 1/13/2021 4:00PM PT
+
+// Upon further investigation, note that the zip code is already stored with the other AQI data in State. No need to refactor to ensure this data is accessible.
+
+// Implemented a skeleton for the removeLocation method in App. This method is passed down in props from App >> AirQualityView >> AirQualityCard. Initially, it is set to console log a message when the location name is clicked.
+
 UPDATE 1/12/2021 2:15PM PT
 
 Steps 1 + 2 from previous update are complete.
