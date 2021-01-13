@@ -2,7 +2,7 @@ import React from 'react';
 
 import AirQualityCard from './AirQualityCard.jsx';
 
-const AirQualityView = ({ aqi, clearLocalStorage }) => {
+const AirQualityView = ({ aqi, removeLocation, clearLocalStorage }) => {
   let removeLocations = null;
   if (aqi.length) {
     removeLocations = (
@@ -15,7 +15,9 @@ const AirQualityView = ({ aqi, clearLocalStorage }) => {
       <div className="aqi-cards">
         {aqi.map((location, index) => {
           return (
-            <AirQualityCard location={location} key={index} />
+            <AirQualityCard location={location}
+                            removeLocation={removeLocation}
+                            key={index} />
           )
         })}
       </div>

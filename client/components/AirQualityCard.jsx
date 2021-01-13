@@ -3,7 +3,7 @@ import React from 'react';
 import Location from './Location.jsx';
 import IndexCard from './IndexCard.jsx';
 
-const AirQualityCard = ({ location }) => {
+const AirQualityCard = ({ location, removeLocation }) => {
 
   let locationJSX = null;
   let airQualityCardJSX = null;
@@ -23,7 +23,7 @@ const AirQualityCard = ({ location }) => {
   }
 
   return (
-    <div className="aqi-card">
+    <div className="aqi-card" onClick={removeLocation}>
       {locationJSX}
       <div className="index-cards">
         {airQualityCardJSX}
