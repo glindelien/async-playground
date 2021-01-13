@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 const airNowURL = 'https://airnowapi.org';
 const currentAqi = '/aq/observation/zipCode/current';
 
-app.post('/api/getAqiByZip', (req, res) => {
+app.post('/api/zipCode', (req, res) => {
   console.log('Fetching AQI data for ' + req.body.zipCode);
   // Extract user inputted zip code
   const zipCode = req.body.zipCode;

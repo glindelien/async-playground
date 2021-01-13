@@ -29,7 +29,7 @@ class App extends React.Component {
   addLocation(event) {
     event.preventDefault();
     // send user submitted zip code to server
-    axios.post('/api/getAqiByZip', {
+    axios.post('/api/zipCode', {
       zipCode: this.state.zipCode
     })
       .then((res) => {
