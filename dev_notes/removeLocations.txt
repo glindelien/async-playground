@@ -1,3 +1,7 @@
+UPDATE 1/13/2021 4:30PM PT
+
+// Implemented ability to extract zip code from element that was clicked. Added pseudocode for next steps for logic in removeLocation method. Feature is 75% complete in functionality, but some frontend styling and additions are still needed.
+
 UPDATE 1/13/2021 3:30PM PT
 
 // Upon further investigation, note that the zip code is already stored with the other AQI data in State. No need to refactor to ensure this data is accessible.
