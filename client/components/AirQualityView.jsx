@@ -3,9 +3,9 @@ import React from 'react';
 import AirQualityCard from './AirQualityCard.jsx';
 
 const AirQualityView = ({ aqi, removeLocation, clearLocalStorage }) => {
-  let removeLocations = null;
+  let removeAllLocationsButton = null;
   if (aqi.length) {
-    removeLocations = (
+    removeAllLocationsButton = (
       <div onClick={clearLocalStorage}>
         <span id="clear-storage">Remove All Locations</span>
       </div>);
@@ -21,7 +21,7 @@ const AirQualityView = ({ aqi, removeLocation, clearLocalStorage }) => {
           )
         })}
       </div>
-      {removeLocations}
+      {removeAllLocationsButton}
     </div>
   );
 };
