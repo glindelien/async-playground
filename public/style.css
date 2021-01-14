@@ -102,6 +102,11 @@ button:hover {
   justify-content: space-evenly;
 }
 
+/* single AQI card */
+.aqi-card {
+  height: 300px;
+}
+
 /* AQI Location */
 .location {
   font-weight: 900;
