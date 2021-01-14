@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AirQualityCard from './AirQualityCard.jsx';
+import AirQualityCard from './airQualityCard/AirQualityCard.jsx';
 
 const AirQualityView = ({ aqi, removeLocation, clearLocalStorage }) => {
   let removeAllLocationsButton = null;

@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
-import Title from './components/Title.jsx';
-import AddLocation from './components/AddLocation.jsx';
-import AirQualityView from './components/AirQualityView.jsx';
+import Title from './components/title/Title.jsx';
+import AddLocation from './components/addLocation/AddLocation.jsx';
+import AirQualityView from './components/airQualityView/AirQualityView.jsx';
 
 class App extends React.Component {
   constructor(props) {
