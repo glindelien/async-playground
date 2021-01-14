@@ -23,7 +23,7 @@ const AirQualityCard = ({ location, removeLocation }) => {
   }
 
   return (
-    <div className="aqi-card" onClick={removeLocation}>
+    <div className="aqi-card" zipcode={location[0].ZipCode} onClick={removeLocation}>
       {locationJSX}
       <div className="index-cards">
         {airQualityCardJSX}
