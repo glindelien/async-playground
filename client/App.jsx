@@ -53,9 +53,12 @@ class App extends React.Component {
   removeLocation(e) {
     // Extract the zip code from the clicked AQI card
     const zip = e.currentTarget.getAttribute('zipcode');
-    console.log(parseInt(zip));
-    const newAqi = this.state.aqi;
-    // use filter() to remove locations matching zip
+    // Filter out the location from AQI data stored in state
+    const newAqi = this.state.aqi.filter((loc) => {
+      return loc[0].ZipCode !== zip;
+    });
+    // Set state with new (filtered) AQI data
+    this.setState({ aqi: newAqi });
   }
 
   clearLocalStorage() {
