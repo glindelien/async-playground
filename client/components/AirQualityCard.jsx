@@ -8,7 +8,7 @@ const AirQualityCard = ({ location, removeLocation }) => {
   let locationJSX = null;
   let airQualityCardJSX = null;
 
-  // Only render these components if user has submitted location(s)
+  // Only render these components if user added location(s)
   if (location.length > 0) {
     const city = location[0].ReportingArea;
     const state = location[0].StateCode;
@@ -26,7 +26,9 @@ const AirQualityCard = ({ location, removeLocation }) => {
     <div className="aqi-card"
          zipcode={location[0].ZipCode}
          onClick={removeLocation}>
+      {/* Display Location for AQI Card */}
       {locationJSX}
+      {/* Display AQI data for location */}
       <div className="index-cards">
         {airQualityCardJSX}
       </div>
