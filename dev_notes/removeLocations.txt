@@ -1,3 +1,7 @@
+UPDATE 1/13/2021 11:59PM PT
+
+// Finished implementation of removeLocation method. Next up: add button & styling for user interface improvements.
+
 UPDATE 1/13/2021 4:30PM PT
 
 // Implemented ability to extract zip code from element that was clicked. Added pseudocode for next steps for logic in removeLocation method. Feature is 75% complete in functionality, but some frontend styling and additions are still needed.
