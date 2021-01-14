@@ -1,3 +1,13 @@
+UPDATE 1/14/2021 12:30AM PT
+
+- Frontend Design Plan for Button to Remove a Single Location -
+
+1. Create a new RemoveLocationButton component
+2. Refactor AirQualityCard to be a class component with state
+3. Add methods to AirQualityCard to determine whether a user is hovering
+4. If hovering: render RemoveLocationButton component, otherwise do not
+5. Pass down removeLocation method from App to RemoveLocationButton component
+
 UPDATE 1/13/2021 11:59PM PT
 
 // Finished implementation of removeLocation method. Next up: add button & styling for user interface improvements.
