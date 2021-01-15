@@ -112,6 +112,10 @@ button:hover {
   font-weight: 900;
 }
 
+.delete:hover {
+  cursor: pointer;
+}
+
 /* div for index cards within AQI card */
 .index-cards {
   height: 200px;
