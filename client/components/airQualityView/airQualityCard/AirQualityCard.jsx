@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Location from './Location.jsx';
 import IndexCard from './IndexCard.jsx';
 
 class AirQualityCard extends React.Component {
@@ -13,7 +12,7 @@ class AirQualityCard extends React.Component {
     this.onMouseLeave = this.onMouseLeave.bind(this);
   }
 
-  onMouseEnter(e) {
+  onMouseEnter() {
     this.setState({ showButton: true });
   }
 
@@ -32,11 +31,13 @@ class AirQualityCard extends React.Component {
       if (!this.state.showButton) {
         loc = `${location[0].ReportingArea}, ${location[0].StateCode}`;
       }
-      locationJSX = <Location loc={loc}
-                              onMouseEnter={this.onMouseEnter}
-                              onMouseLeave={this.onMouseLeave}
-                              removeLocation={removeLocation}
-                              zipcode={location[0].ZipCode} />
+      locationJSX = <div className="location"
+                         onMouseEnter={this.onMouseEnter}
+                         onMouseLeave={this.onMouseLeave}
+                         onClick={removeLocation}
+                         zipcode={location[0].ZipCode}>
+                      {loc}
+                    </div>
 
       airQualityCardJSX = location.map((data, index) => {
         return (
