@@ -1,3 +1,10 @@
+UPDATE 1/16/2021 5:30PM PT
+
+// Remove Location feature has been implemented, but needs some improvements for UI
+// Create appropriate elements w/ class names for styling
+// Find a better "X"
+// Add background + border styling so it looks like a circle
+
 UPDATE 1/14/2021 12:30AM PT
 
 - Frontend Design Plan for Button to Remove a Single Location -
