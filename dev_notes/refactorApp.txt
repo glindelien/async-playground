@@ -1,0 +1,14 @@
+PLAN TO REFACTOR APP COMPONENT
+
+Move methods and associated logic into separate files
+
+App should render:
+- Title
+- AddLocation
+- AirQualityView
+
+Refactor out the logic from App's addLocation method and move it into the AddLocation component.
+
+handleInputChange can be moved out of App and into AddLocation - mabye use hooks?
+
+AirQualityCard could perhaps be refactored to be a functional component using hooks to keep track of whether the delete button appears or not.
