@@ -1,3 +1,12 @@
+UPDATE 1/17/2021 5:30PM PT
+
+// Research symbol or font for improved "x" on delete button
+// Button should be circular
+// Button should have similar styling to the add location input fields
+// On hover, button background should change to be slightly lighter in color
+// Modify cursors for on hover as needed
+// Decide whether to make button its own component (is it complex enough to live in its own file?)
+
 UPDATE 1/16/2021 5:30PM PT
 
 // Remove Location feature has been implemented, but needs some improvements for UI
