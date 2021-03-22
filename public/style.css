@@ -133,6 +133,7 @@ button:hover {
   align-items: center;
   background-color: #11181f;
   margin: 0px 10px 10px 0px;
+  border-radius: 15px;
 }
 
 /* Dynamically Render COLOR of Index Cards based on AQI */
