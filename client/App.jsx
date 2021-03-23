@@ -61,9 +61,11 @@ class App extends React.Component {
     this.setState({ aqi: newAqi });
   }
 
-  clearLocalStorage() {
-    localStorage.clear();
-    this.setState({ aqi: [] });
+  clearLocalStorage(e) {
+    if (e.type === 'click' || e.key === 'Enter') {
+      localStorage.clear();
+      this.setState({ aqi: [] });
+    }
   }
 
   render() {
