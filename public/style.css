@@ -87,6 +87,11 @@ button:hover {
   background-color: #36506d;
 }
 
+/* Focus Style for Buttons */
+button:focus {
+  background-color: #36506d;
+}
+
 /* AQI VIEW */
 .air-quality-view {
   display: flex;
@@ -165,9 +170,16 @@ button:hover {
 #clear-storage {
   font-weight: 100;
   font-size: 15px;
+  padding: 10px;
+  border: 1px solid #446b92;
+  border-radius: 10px;
 }
 
 #clear-storage:hover {
-  color: #a1c7ee;
+  background-color: #24374b;
   cursor: pointer;
+}
+
+#clear-storage:focus {
+  background-color: #24374b;
 }
