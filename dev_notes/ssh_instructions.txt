@@ -1,0 +1,1 @@
+ssh -i awaire.pem ubuntu@ec2-54-151-78-232.us-west-1.compute.amazonaws.com
