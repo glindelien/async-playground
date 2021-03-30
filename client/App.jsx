@@ -72,7 +72,7 @@ class App extends React.Component {
     localStorage.setItem('aqi', JSON.stringify(this.state.aqi));
     return (
       <div id="main">
-        <Title />
+        <header><Title /></header>
         <AddLocation handleInputChange={this.handleInputChange}
                      addLocation={this.addLocation}
                      zipCode={this.state.zipCode} />

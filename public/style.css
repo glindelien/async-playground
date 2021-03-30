@@ -23,6 +23,11 @@ body {
 /* HEADER */
 
 /* Title */
+h1 {
+  font-size: 75px;
+  margin-bottom: 0px;
+}
+
 #air {
   color: #7ca5ce;
   font-weight: 750;
