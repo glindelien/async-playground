@@ -62,8 +62,11 @@ class App extends React.Component {
   }
 
   clearLocalStorage(e) {
+    // Check if event type was a mouse click or enter keypress
     if (e.type === 'click' || e.key === 'Enter') {
+      // Clear local storage
       localStorage.clear();
+      // Set AQI data in state to empty array
       this.setState({ aqi: [] });
     }
   }
@@ -72,10 +75,13 @@ class App extends React.Component {
     localStorage.setItem('aqi', JSON.stringify(this.state.aqi));
     return (
       <div id="main">
+
         <header><Title /></header>
+
         <AddLocation handleInputChange={this.handleInputChange}
                      addLocation={this.addLocation}
                      zipCode={this.state.zipCode} />
+
         <AirQualityView aqi={this.state.aqi}
                         removeLocation={this.removeLocation}
                         clearLocalStorage={this.clearLocalStorage} />
