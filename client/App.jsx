@@ -4,6 +4,7 @@ import axios from 'axios';
 import Title from './components/title/Title.jsx';
 import AddLocation from './components/addLocation/AddLocation.jsx';
 import AirQualityView from './components/airQualityView/AirQualityView.jsx';
+import About from './components/about/About.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -85,6 +86,9 @@ class App extends React.Component {
         <AirQualityView aqi={this.state.aqi}
                         removeLocation={this.removeLocation}
                         clearLocalStorage={this.clearLocalStorage} />
+
+        {/* <About /> */}
+
       </div>
     );
   }
