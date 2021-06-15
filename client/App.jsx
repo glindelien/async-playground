@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import Title from './components/title/Title.jsx';
+import NavBar from './components/navBar/NavBar.jsx';
 import AddLocation from './components/addLocation/AddLocation.jsx';
 import AirQualityView from './components/airQualityView/AirQualityView.jsx';
 import About from './components/about/About.jsx';
@@ -78,6 +79,8 @@ class App extends React.Component {
       <div id="main">
 
         <header><Title /></header>
+
+        <NavBar />
 
         <AddLocation handleInputChange={this.handleInputChange}
                      addLocation={this.addLocation}
