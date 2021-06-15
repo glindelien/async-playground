@@ -48,6 +48,12 @@ h1 {
   margin-top: 3%;
 }
 
+/* Navigation Bar */
+#nav-table {
+  margin: 30px auto auto auto;
+  width: 300px;
+}
+
 /* FORMS */
 
 /* div for Input & Submit */
