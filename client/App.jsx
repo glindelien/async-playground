@@ -23,11 +23,13 @@ class App extends React.Component {
     this.removeLocation = this.removeLocation.bind(this);
   }
 
+  // Allows users to switch view after clicking on NavBar elements
   switchView(e) {
     const newView = e.target.innerHTML.toLowerCase();
     this.setState({ currentView: newView });
   }
 
+  // Tracks zip code input
   handleInputChange(e) {
     const value = e.target.value;
     const name = e.target.name;
@@ -36,6 +38,7 @@ class App extends React.Component {
     });
   }
 
+  // Adds location & fetches AQI data for it
   addLocation(event) {
     event.preventDefault();
     // send user submitted zip code to server
@@ -60,6 +63,7 @@ class App extends React.Component {
       });
   }
 
+  // Removes specific location from storage
   removeLocation(e) {
     // Extract the zip code from the clicked AQI card
     const zip = e.currentTarget.getAttribute('zipcode');
@@ -71,6 +75,7 @@ class App extends React.Component {
     this.setState({ aqi: newAqi });
   }
 
+  // Removes all locations from storage
   clearLocalStorage(e) {
     // Check if event type was a mouse click or enter keypress
     if (e.type === 'click' || e.key === 'Enter') {
@@ -82,7 +87,9 @@ class App extends React.Component {
   }
 
   render() {
+    // Save current AQI data to localStorage
     localStorage.setItem('aqi', JSON.stringify(this.state.aqi));
+
     return (
       <div id="main">
 
@@ -90,6 +97,7 @@ class App extends React.Component {
 
         <NavBar switchView={this.switchView} />
 
+        {/* Render if AQI view is selected */}
         {this.state.currentView === 'home' ?
           <>
             <AddLocation handleInputChange={this.handleInputChange}
@@ -103,6 +111,7 @@ class App extends React.Component {
           : null
         }
 
+        {/* Render if About view is selected */}
         {this.state.currentView === 'about' ? <About /> : null}
 
       </div>
