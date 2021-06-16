@@ -194,3 +194,9 @@ button:focus {
 #clear-storage:focus {
   background-color: #24374b;
 }
+
+/* ABOUT PAGE */
+#about {
+  width: 500px;
+  margin: auto;
+}
