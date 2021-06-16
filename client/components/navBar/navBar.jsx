@@ -1,12 +1,11 @@
 import React from 'react';
 
-const NavBar = () => {
+const NavBar = ({ switchView }) => {
   return (
       <table id="nav-table">
         <tr>
-          <td>Home</td>
-          <td>About</td>
-          <td>AQI Legend</td>
+          <td onClick={switchView}>Home</td>
+          <td onClick={switchView}>About</td>
         </tr>
       </table>
   );
