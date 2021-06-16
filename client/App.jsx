@@ -12,12 +12,20 @@ class App extends React.Component {
     super(props);
     this.state = {
       zipCode: '',
-      aqi: JSON.parse(localStorage.getItem('aqi')) || []
+      aqi: JSON.parse(localStorage.getItem('aqi')) || [],
+      currentView: 'about'
     };
+
+    this.switchView = this.switchView.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.addLocation = this.addLocation.bind(this);
     this.clearLocalStorage = this.clearLocalStorage.bind(this);
     this.removeLocation = this.removeLocation.bind(this);
+  }
+
+  switchView(e) {
+    const newView = e.target.innerHTML.toLowerCase();
+    this.setState({ currentView: newView });
   }
 
   handleInputChange(e) {
@@ -80,17 +88,22 @@ class App extends React.Component {
 
         <header><Title /></header>
 
-        <NavBar />
+        <NavBar switchView={this.switchView} />
 
-        <AddLocation handleInputChange={this.handleInputChange}
-                     addLocation={this.addLocation}
-                     zipCode={this.state.zipCode} />
+        {this.state.currentView === 'home' ?
+          <>
+            <AddLocation handleInputChange={this.handleInputChange}
+                        addLocation={this.addLocation}
+                        zipCode={this.state.zipCode} />
 
-        <AirQualityView aqi={this.state.aqi}
-                        removeLocation={this.removeLocation}
-                        clearLocalStorage={this.clearLocalStorage} />
+            <AirQualityView aqi={this.state.aqi}
+                            removeLocation={this.removeLocation}
+                            clearLocalStorage={this.clearLocalStorage} />
+          </>
+          : null
+        }
 
-        {/* <About /> */}
+        {this.state.currentView === 'about' ? <About /> : null}
 
       </div>
     );
