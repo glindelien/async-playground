@@ -13,7 +13,7 @@ class App extends React.Component {
     this.state = {
       zipCode: '',
       aqi: JSON.parse(localStorage.getItem('aqi')) || [],
-      currentView: 'about'
+      currentView: 'home'
     };
 
     this.switchView = this.switchView.bind(this);
