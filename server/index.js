@@ -26,6 +26,9 @@ app.post('/api/zipCode', (req, res) => {
   axios.get(airNowURL + currentAqi + params)
   .then((result) => {
     if (result.data.length === 0) throw 'No Data Found';
+    // Attach Zip Code as property to each AQI card
+    result.data.forEach(AQI => AQI.ZipCode = zipCode);
+    // Send Data to Client
     console.log('Sending data to client...');
     res.status(200);
     res.send(result.data);
