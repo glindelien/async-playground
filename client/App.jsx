@@ -12,12 +12,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       zipCode: '',
-      aqi: JSON.parse(localStorage.getItem('aqi')) || [],
+      aqi: JSON.parse(localStorage.getItem('aqi')) || [], // fetch saved locations
       currentView: 'home'
     };
 
     this.switchView = this.switchView.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.updateSavedLocations = this.updateSavedLocations.bind(this);
     this.addLocation = this.addLocation.bind(this);
     this.clearLocalStorage = this.clearLocalStorage.bind(this);
     this.removeLocation = this.removeLocation.bind(this);
@@ -38,6 +39,27 @@ class App extends React.Component {
     });
   }
 
+  updateSavedLocations() {
+    // Save each server request as a promise
+    const promises = [];
+    this.state.aqi.forEach(location => {
+      promises.push(axios.post('/api/zipCode', {
+        zipCode: location[0].ZipCode
+      }));
+    });
+    // Promise all promises saved above
+    Promise.all(promises)
+    .then(result => {
+      // Push result data into updated data array
+      const updatedData = [];
+      result.forEach(response => {
+        updatedData.push(response.data);
+        // Update state with new data
+        this.setState({ aqi: updatedData });
+      });
+    });
+  }
+
   // Adds location & fetches AQI data for it
   addLocation(event) {
     event.preventDefault();
@@ -46,10 +68,6 @@ class App extends React.Component {
       zipCode: this.state.zipCode
     })
       .then((res) => {
-        // add zip code to each AQI object in res array
-        res.data.forEach((index) => {
-          index.ZipCode = this.state.zipCode;
-        });
         // push res data into AQI array & update state
         const newAqi = this.state.aqi;
         newAqi.push(res.data);
@@ -84,6 +102,10 @@ class App extends React.Component {
       // Set AQI data in state to empty array
       this.setState({ aqi: [] });
     }
+  }
+
+  componentDidMount() {
+    this.updateSavedLocations();
   }
 
   render() {
