@@ -49,16 +49,34 @@ h1 {
 }
 
 /* Navigation Bar */
-#nav-table {
-  margin: 30px auto auto auto;
-  width: 300px;
+nav {
+  width: 150px;
+  margin: 10px auto auto auto;
+  padding: 6px;
+  background-color: #24374b;
+  border: 1px solid #446b92;
+}
+
+nav li {
+  display: inline;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+nav li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav li:focus {
+  text-decoration: underline;
 }
 
 /* FORMS */
 
 /* div for Input & Submit */
 .input-submit {
-  margin-top: 50px;
+  margin-top: 80px;
   font-size: 20px;
   font-weight: 900;
 }
